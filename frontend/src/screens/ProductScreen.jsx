@@ -18,8 +18,8 @@ const ProductScreen = () => {
           <Image src={product.image} alt={product.name} fluid />
         </Col>
         <Col md={4}>
-          <ListGroup>
-            <ListGroup.Item variant="flush">
+          <ListGroup variant="flush">
+            <ListGroup.Item >
               <h3>{product.name}</h3>
             </ListGroup.Item>
             <ListGroup.Item>
@@ -34,7 +34,7 @@ const ProductScreen = () => {
         </Col>
         <Col md={3}>
           <Card>
-            <ListGroup.Group variant="flush">
+            <ListGroup variant="flush">
               <ListGroup.Item>
                 <Row>
                   <Col>Price:</Col>
@@ -49,7 +49,7 @@ const ProductScreen = () => {
                   <Col>Status:</Col>
                   <Col>
                     <strong>
-                      ${product.countInStock > 0 ? "In Stock" : "Out of Stock"}
+                      {product.countInStock > 0 ? "In Stock" : "Out of Stock"}
                     </strong>
                   </Col>
                 </Row>
@@ -61,7 +61,7 @@ const ProductScreen = () => {
                 disabled={product.countInStock === 0}>
                 <Button>Add to Cart</Button>
               </ListGroup.Item>
-            </ListGroup.Group>
+            </ListGroup>
           </Card>
         </Col>
       </Row>
