@@ -1,11 +1,14 @@
 import express from 'express';
 import dotenv from 'dotenv';
-import products from './data/products.js'
-
+import products from './data/products.js';
+import connectDB from './config/db.js';
 
 dotenv.config();
 const port = 5000 || process.env.PORT;
 const app = express();
+
+// connect to MongoDB
+connectDB();
 
 app.get('/', (req, res) => {
     res.send('API is running...');
