@@ -5,12 +5,12 @@ const userSchema = new mongoose.Schema({
         type: String,
         required: true,
     },
-    emaiL: {
+    email: {
         type: String,
         required: true,
     },
     password: {
-        password: String,
+        type: String,
         required: true,
     },
     isAdmin: {
