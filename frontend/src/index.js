@@ -11,8 +11,11 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-//import HomeScreen from './screens/HomeScreen';
-//import ProductScreen from './screens/ProductScreen';
+import { Provider } from 'react-redux';
+import store from './store.js'
+
+// import HomeScreen from './screens/HomeScreen';
+// import ProductScreen from './screens/ProductScreen';
 
 
 // const router = createBrowserRouter(
@@ -28,7 +31,9 @@ import reportWebVitals from './reportWebVitals';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <App/>
+    <Provider store={store}>
+      <App/>
+    </Provider>
   </React.StrictMode>
 );
 
