@@ -22,7 +22,6 @@ const ProductScreen = () => {
   const [qty, setQty] = useState(1);
 
   const { data: product, isLoading, error } = useGetProductDetailsQuery(productId);
-  console.log("hi")
   // useEffect( () => {
   //   const fetchProduct = async () => {
   //     const { data } = await axios.get(`/api/products/${productId}`);
