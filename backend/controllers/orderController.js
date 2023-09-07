@@ -40,7 +40,7 @@ const addOrderItems = asyncHandler(async (req, res) => {
 
 // GET /api/orders/myorders
 const getMyOrders = asyncHandler(async (req, res) => {
-    const orders = await Order.find({ user: req.user_id });
+    const orders = await Order.find({ user: req.user._id });
     res.status(200).json(orders);
 });
 
