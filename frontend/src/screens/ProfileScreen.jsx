@@ -43,9 +43,7 @@ const ProfileScreen = () => {
         }
     }
   };
-  const tp = (data) => {
-    console.log(typeof data );
-  }
+
   return (
     <Row>
         <Col md={3}>

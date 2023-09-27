@@ -7,6 +7,7 @@ import Loader from "../components/Loader";
 import Message from "../components/Message";
 import Paginate from "../components/Paginate";
 import { Link } from "react-router-dom";
+import Meta from "../components/Meta";
 import ProductCarousel from "../components/ProductCarousel";
 
 const HomeScreen = () => {
@@ -31,6 +32,7 @@ const HomeScreen = () => {
       { isLoading ? (<Loader></Loader>) : error ? (<Message variant='danger'>{error?.data?.message 
         || error.error}
       </Message>) : (<>
+        <Meta/>
         <h1>Latest Product</h1>
         <Row>
           {data.products.map((product) => (
